@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("TiendaContext") ?? throw new InvalidOperationException("Connection string 'TiendaContext' not found.");
+
+builder.Services.AddDbContext<TiendaContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
