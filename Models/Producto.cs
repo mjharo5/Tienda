@@ -23,5 +23,12 @@ namespace Tienda.Models
         [Required(ErrorMessage = "El stock es obligatorio.")]
         [Range(0, 10000, ErrorMessage = "El stock debe estar entre {1} y {2} unidades.")]
         public int Stock { get; set; }
+
+        [Required(ErrorMessage = "Debe seleccionar una categoría.")]
+        [Display(Name = "Categoría")]
+        public int CategoriaId { get; set; }
+
+        [ForeignKey("CategoriaId")]
+        public Categoria? Categoria { get; set; }
     }
 }
