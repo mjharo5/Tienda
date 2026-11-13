@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Tienda.Models;
 
-public class TiendaContext(DbContextOptions<TiendaContext> options) : DbContext(options)
+public class TiendaContext(DbContextOptions<TiendaContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
-    public DbSet<Tienda.Models.Producto> Producto { get; set; } = default!;
-    public DbSet<Tienda.Models.Categoria> Categoria { get; set; } = default!;
+    public DbSet<Producto> Producto { get; set; } = default!;
+    public DbSet<Categoria> Categoria { get; set; } = default!;
 }
