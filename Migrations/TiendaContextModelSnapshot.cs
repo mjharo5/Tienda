@@ -28,6 +28,10 @@ namespace Tienda.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -46,7 +50,7 @@ namespace Tienda.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoriaId")
+                    b.Property<int>("CategoriaId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
@@ -69,9 +73,13 @@ namespace Tienda.Migrations
 
             modelBuilder.Entity("Tienda.Models.Producto", b =>
                 {
-                    b.HasOne("Tienda.Models.Categoria", null)
+                    b.HasOne("Tienda.Models.Categoria", "Categoria")
                         .WithMany("Productos")
-                        .HasForeignKey("CategoriaId");
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
                 });
 
             modelBuilder.Entity("Tienda.Models.Categoria", b =>

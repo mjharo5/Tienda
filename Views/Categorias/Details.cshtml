@@ -1,24 +1,65 @@
 @model Tienda.Models.Categoria
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles";
 }
 
-<h1>Details</h1>
+<style>
+    .btn-pastel {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 7px;
+        border: 1px solid;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .bg-amarillo {
+        background-color: #FFF0C2;
+        color: #80621B;
+        border-color: #F2DEA0;
+    }
+
+    .bg-gris {
+        background-color: #E8E8E8;
+        color: #555555;
+        border-color: #D0D0D0;
+    }
+
+    .botones {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        align-items: center;
+    }
+</style>
+
+<h1>Detalles</h1>
 
 <div>
     <h4>Categoria</h4>
     <hr />
+
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Volver a la lista</a>
+
+<div class="botones">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-pastel bg-amarillo">Editar</a>
+
+    <a asp-action="Index" class="btn-pastel bg-gris">Volver a la lista</a>
 </div>

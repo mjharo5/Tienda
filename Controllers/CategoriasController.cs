@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tienda.Models;
@@ -13,7 +12,7 @@ public class CategoriasController : Controller
     }
 
     // GET: CATEGORIAS
-    public async Task<IActionResult> Index()    
+    public async Task<IActionResult> Index()
     {
         return View(await _context.Categoria.ToListAsync());
     }
@@ -47,7 +46,7 @@ public class CategoriasController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Nombre,Productos")] Categoria categoria)
+    public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion")] Categoria categoria)
     {
         if (ModelState.IsValid)
         {
@@ -79,7 +78,7 @@ public class CategoriasController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int? id, [Bind("Id,Nombre,Productos")] Categoria categoria)
+    public async Task<IActionResult> Edit(int? id, [Bind("Id,Nombre,Descripcion")] Categoria categoria)
     {
         if (id != categoria.Id)
         {
