@@ -9,6 +9,7 @@ builder.Services.AddDbContext<TiendaContext>(options => options.UseSqlServer(con
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.SignIn.RequireConfirmedAccount = false)
+    .AddErrorDescriber<IdentityErrorDescriberEs>()
     .AddEntityFrameworkStores<TiendaContext>();
 
 // Add services to the container.

@@ -11,7 +11,6 @@ namespace Tienda.Models
         [Display(Name = "Nombre de la Categoría")]
         public string Nombre { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "La descripción de la categoría es obligatoria.")]
         [StringLength(200, ErrorMessage = "La descripción no puede exceder los 200 caracteres.")]
         [Display(Name = "Descripción")]
         public string? Descripcion { get; set; }

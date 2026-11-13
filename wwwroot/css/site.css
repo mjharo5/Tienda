@@ -62,3 +62,41 @@ body {
     text-align: start;
 }
 
+.auth-card {
+    border: none;
+    border-radius: 1.25rem;
+    background-color: #fbfaff;
+    box-shadow: 0 8px 30px rgba(120, 130, 190, 0.22);
+}
+
+    .auth-card h1 {
+        color: #3b4a7a;
+    }
+
+    .auth-card .form-control {
+        padding: 0.8rem 1rem;
+        font-size: 1.05rem;
+        border-radius: 0.75rem;
+        border: 1px solid #d8def5;
+    }
+
+        .auth-card .form-control:focus {
+            border-color: #b8c9f2;
+            box-shadow: 0 0 0 0.25rem rgba(184, 201, 242, 0.4);
+        }
+
+.btn-pastel {
+    background-color: #b8c9f2;
+    border: 2px solid #a3b8ec;
+    color: #2f3b66;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    padding: 0.8rem 1rem;
+}
+
+    .btn-pastel:hover,
+    .btn-pastel:focus {
+        background-color: #a3b8ec;
+        border-color: #8fa6e4;
+        color: #2f3b66;
+    }
