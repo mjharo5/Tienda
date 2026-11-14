@@ -11,3 +11,12 @@ Roles: Administrador (gestión) y Cliente (consulta).
 | 2 | Diego Baque | Fase 3 |
 | 3 | Sheyla Bernal | Fase 4 |
 | 4 | Anthony Aguilar  | Fase 5 |
+# Usuarios de prueba
+
+## Administrador
+Correo: admin@tienda.com
+Contraseña: Admin123*
+
+## Empleado
+Correo: empleado@tienda.com
+Contraseña: Empleado123*
