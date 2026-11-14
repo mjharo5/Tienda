@@ -1,37 +1,7 @@
 html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
-
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
-}
-
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
-}
-
-html {
     font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -40,17 +10,12 @@ html {
     }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body {
     margin-bottom: 60px;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #b8c9f2;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -62,6 +27,7 @@ body {
     text-align: start;
 }
 
+/* Tarjeta de inicio de sesión y registro */
 .auth-card {
     border: none;
     border-radius: 1.25rem;
@@ -85,18 +51,59 @@ body {
             box-shadow: 0 0 0 0.25rem rgba(184, 201, 242, 0.4);
         }
 
-.btn-pastel {
+/* Botones pastel */
+.btn-pastel,
+.btn-primary {
     background-color: #b8c9f2;
     border: 2px solid #a3b8ec;
     color: #2f3b66;
     font-weight: 600;
     border-radius: 0.75rem;
+}
+
+.btn-pastel {
     padding: 0.8rem 1rem;
 }
 
     .btn-pastel:hover,
-    .btn-pastel:focus {
+    .btn-pastel:focus,
+    .btn-pastel:active,
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
         background-color: #a3b8ec;
         border-color: #8fa6e4;
         color: #2f3b66;
     }
+
+.btn-danger {
+    background-color: #f7c5cf;
+    border: 2px solid #f0aebb;
+    color: #7a2d3d;
+    font-weight: 600;
+    border-radius: 0.75rem;
+}
+
+    .btn-danger:hover,
+    .btn-danger:focus,
+    .btn-danger:active {
+        background-color: #f0aebb;
+        border-color: #e897a8;
+        color: #7a2d3d;
+    }
+
+.btn-success {
+    background-color: #bfe8d3;
+    border: 2px solid #a6dcc1;
+    color: #24533f;
+    font-weight: 600;
+    border-radius: 0.75rem;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+    background-color: #a6dcc1;
+    border-color: #8fd0b0;
+    color: #24533f;
+}

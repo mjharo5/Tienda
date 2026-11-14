@@ -1,9 +1,10 @@
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tienda.Models;
 
+[Authorize]
 public class ProductosController : Controller
 {
     private readonly TiendaContext _context;
@@ -14,6 +15,7 @@ public class ProductosController : Controller
     }
 
     // GET: PRODUCTOS
+    [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
         var applicationDbContext = _context.Producto.Include(p => p.Categoria);
@@ -21,6 +23,7 @@ public class ProductosController : Controller
     }
 
     // GET: PRODUCTOS/Details/5
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int? id)
     {
         if (id == null)
