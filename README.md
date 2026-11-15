@@ -11,7 +11,7 @@ Roles: Administrador (gestión) y Cliente (consulta).
 | Administrador | Gestión | Crear, editar y eliminar en ambas entidades |
 | Cliente | Consulta | Solo ver la lista y el detalle |
 
-## Integrantes
+## 1. Integrantes
 | Turno | Integrante | Fases |
 |---|---|---|
 | 1 | Maria Jose Haro | Fase 1 y Fase 2 |
@@ -19,7 +19,7 @@ Roles: Administrador (gestión) y Cliente (consulta).
 | 3 | Sheyla Bernal | Fase 4 |
 | 4 | Anthony Aguilar  | Fase 5 |
 
-## Aporte de cada integrante
+## 2. Aporte de cada integrante
 | Integrante | Fase | Aporte | Migración creada |
 |---|---|---|---|
 | María José Haro | 1 | Proyecto nuevo ASP.NET Core MVC (.NET 10), repositorio en GitHub, entidad Producto con su CRUD por scaffolding y cadena de conexión a `localhost\SQLEXPRESS` | `InitialCreate` |
@@ -30,7 +30,7 @@ Roles: Administrador (gestión) y Cliente (consulta).
 | Anthony Aguilar | 5 | `.AddRoles<IdentityRole>()`, creación de los roles Administrador y Cliente al iniciar con `RoleManager`, y de los dos usuarios de prueba con su rol vía `UserManager` | (sin migración) |
 | [Quien lo haga] | Componente autónomo | Restricción por rol en ambos controladores y ocultar los enlaces Crear, Editar y Eliminar según el rol | (sin migración) |
 
-## 4. Usuarios de prueba
+## 3. Usuarios de prueba
 Se crean automáticamente al iniciar la aplicación.
 
 | Rol | Correo | Contraseña |
@@ -38,14 +38,14 @@ Se crean automáticamente al iniciar la aplicación.
 | Administrador | admin@tienda.com | Admin123* |
 | Cliente | cliente@tienda.com | Cliente123* |
 
-## 5. Cómo ejecutar el proyecto
+## 4. Cómo ejecutar el proyecto
 
 ### Requisitos
 - Visual Studio con la carga de trabajo **ASP.NET y desarrollo web** y el SDK de **.NET 10**.
 - **SQL Server Express** (instancia `SQLEXPRESS`) y, opcionalmente, **SSMS** para ver las tablas.
 - **Git**.
 
-### Pasos
+### 5. Pasos
 1. **Clonar el repositorio** en Visual Studio (**Git > Clonar repositorio**) o con:
    git clone https://github.com/mjharo5/Tienda.git
    
