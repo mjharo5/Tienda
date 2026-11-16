@@ -59,7 +59,10 @@
 </div>
 
 <div class="botones">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-pastel bg-amarillo">Editar</a>
+    @if (User.IsInRole("Administrador"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-pastel bg-amarillo">Editar</a>
+    }
 
     <a asp-action="Index" class="btn-pastel bg-gris">Volver a la lista</a>
 </div>

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tienda.Models;
 
-[Authorize]
+[Authorize(Roles = "Administrador")]
 public class ProductosController : Controller
 {
     private readonly TiendaContext _context;

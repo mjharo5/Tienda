@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tienda.Models;
 
+[Authorize(Roles = "Administrador")]
 public class CategoriasController : Controller
 {
     private readonly TiendaContext _context;
@@ -12,12 +14,14 @@ public class CategoriasController : Controller
     }
 
     // GET: CATEGORIAS
+    [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
         return View(await _context.Categoria.ToListAsync());
     }
 
     // GET: CATEGORIAS/Details/5
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int? id)
     {
         if (id == null)
